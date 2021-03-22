@@ -28,10 +28,5 @@ datos.on('message', function(msg, rinfo) {
     })
   });
   
-
-
-
-
-
   // Fijación del puerto UDP 
   datos.bind(37777);
