@@ -2,7 +2,7 @@ const express = require("express")
 var app = express()
 // fs es para manipular archivos en general (en este caso un txt)
 const fs = require("fs")
-app.listen(37778);
+app.listen(5000);
 
 app.use(express.static("estatico"))  
 
@@ -30,3 +30,4 @@ datos.on('message', function(msg, rinfo) {
   
   // Fijación del puerto UDP 
   datos.bind(37777);
+
