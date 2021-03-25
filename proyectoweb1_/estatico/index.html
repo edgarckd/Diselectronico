@@ -16,13 +16,9 @@
 
 <style> 
 
-
-
 #map {width: 800px;height: 400px} </style>
 
 </head>
-
-
 
 <body onload="readFile()">
 <h1 id="output1"></h1>
@@ -61,26 +57,14 @@ function readFile(){
         marker1 = L.marker(LatLng).addTo(map)
             .bindPopup('Taxi No:1 <br> Placa: AVM569.')
             .openPopup();
-            cont++;
-
-        
+            cont++;        
             
     })
     
-}setInterval(readFile,2500);
-
-
-
-
-
-
-        
-        
+}setInterval(readFile,2500);   
       
 
 </script>
-
-
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="jscode.js"></script>
