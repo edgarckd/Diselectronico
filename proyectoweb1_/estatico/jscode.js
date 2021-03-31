@@ -2,7 +2,7 @@ var cont=0;
 var marker1;
 let arraypoly=[];
 
-var map = L.map("map").setView([10.982088164553303,-74.78344818015789],13);
+var map = L.map("map").setView([10.982088164553303,-74.78344818015789],16);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',

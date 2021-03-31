@@ -1,1 +1,73 @@
-holis
+
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Esta página muestra la geolocalización de tu vehículo"/>
+        <meta name="robots" content="index,follow"/>
+        <title>TIO TAXIS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    </head>
+
+    <style>
+        #map {width: cover; height: 600px;}
+        #tabla {width: 100%;}
+        td {width: 33%}
+    </style>
+
+    <body>
+
+        <header>
+            <h1>TIO TAXI</h1>
+            <nav>
+                <ul class=u_list_box>
+                    <li class=list_item><a href="javascript: window.close();">Tu taxi en vivo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <form action="">
+                <table id="tabla">
+                    <tr>
+                        <label for="calendario"></label>
+                            <td><span>Inicial</span></td>
+                            <td><input type="datetime-local" name="calendario" id="calendario" required></td>
+                        </label>
+                        
+                        <label for="calendario">
+                            <td><span>Final</span></td>
+                            <td><input type="datetime-local" name="calendario" id="calendario" required></td>
+                        </label>
+                        <td><input type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+
+            <div id="map"> </div>
+            <table id="tabla">
+                <tr>
+                    <td>LATITUD</td>
+                    <td>LONGITUD</td>
+                    <td>TIEMPO</td>
+                </tr>
+                <tr onload="readFile()">
+                    <td id="output1"></td>
+                    <td id="output2"></td>
+                    <td id="output3"></td>
+                </tr>
+            </table>
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="an>
+            <script src="/estatico/jscode.js"></script>
+        </main>
+    </body>
+
+</html>
