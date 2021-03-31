@@ -1,4 +1,0 @@
-long time = loc.getTime();
-Date date = new Date(time);
-SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-String text = sdf.format(date);
