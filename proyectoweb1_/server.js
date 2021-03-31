@@ -45,9 +45,16 @@ datos.on('error', (err) => {
 
 //obtengo de datos el mensaje que envio desde la app
 //SINFFER
+<<<<<<< HEAD
 datos.on('message', (msg, rinfo) =>  {
     msg = msg.toString()
     fs.writeFile('/var/www/taxis/TAXIS-web-server-2/proyectoweb1_/estatico/result.txt', msg, err => {
+=======
+datos.on('message', function(msg, rinfo) {
+//UTF8 es un estandar para leer los datos que me llegan     
+    var result= msg.toString('utf8')  
+    fs.writeFile('C:\Users\jcmju\OneDrive\Escritorio\proyectoweb1\proyectoweb1_\estatico', result, err => {
+>>>>>>> a159fb2f85373c1253ab264062f3bc1d0354bc1f
               if (err) throw err;
     })
     console.log(msg)
@@ -57,6 +64,7 @@ datos.on('message', (msg, rinfo) =>  {
     tim = ("\'"+data[2]+"\'")
     console.log(lat)
   });
+<<<<<<< HEAD
 
 setInterval(function() {
     client.query('INSERT INTO public.geodatos("latitud","longitud","time")VALUES ('+lat+','+lon+','+tim+');', (err,res)=>{
@@ -66,3 +74,9 @@ setInterval(function() {
 
 // Fijación del puerto UDP 
 datos.bind(37777);
+=======
+  
+  // Fijación del puerto UDP 
+  datos.bind(37777);
+
+>>>>>>> a159fb2f85373c1253ab264062f3bc1d0354bc1f
