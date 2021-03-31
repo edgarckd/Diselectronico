@@ -57,7 +57,6 @@ datos.on('message', (msg, rinfo) =>  {
     tim = ("\'"+data[2]+"\'")
     console.log(lat)
   });
-<<<<<<< HEAD
 
 setInterval(function() {
     client.query('INSERT INTO public.geodatos("latitud","longitud","time")VALUES ('+lat+','+lon+','+tim+');', (err,res)=>{
