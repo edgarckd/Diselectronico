@@ -12,15 +12,15 @@ function obtenerdatos(){
 	console.log(cal1)
 
 	var split = cal1.split("T")
+	var split2 = cal2.split("T")
+
 	fecha1 = split[0]
 	hora1 = split[1]
-
-	var split = cal2.split("T")
 	fecha2 = split[0]
 	hora2 = split[1]
 
-	//document.form1.dato.value = fecha;
-
-	//console.log("fecha2"+fecha2)
+//	return [fecha1,hora1,fecha2,hora2]
 
 }
+
+//	module.exports.obtenerdatos = obtenerdatos
