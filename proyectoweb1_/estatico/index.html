@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="description" content="Esta página muestra la geolocalización de tu vehículo"/>
-        <meta name="robots" content="index,follow"/>        
-        <title>TIO TAXIS</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <!-- se importa boostrap para el diseño --> 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Esta página muestra la geolocalización de tu vehículo" />
+    <meta name="robots" content="index,follow" />
+    <title>TIO TAXIS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- se importa boostrap para el diseño -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
-    </head>
+</head>
 
-    <style>
-        #map {width: cover; height: 400px;}
-        #tabla {width: 100%;}
-	    td {width: 33%}
-    </style>
+<style>
+    #map {
+        width: cover;
+        height: 400px;
+    }
 
-    <body>
+    #tabla {
+        width: 100%;
+    }
 
-        <header class="container-fluid">
-            <div class="row">
+    td {
+        width: 33%
+    }
+</style>
 
-                <div class="col-lg-12 mx-auto"> 
+<body>
+
+    <header class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-12 h-100 d-flex">
+                <div class="mx-auto d-flex"> 
+                    <img src="./imagenes/1617579128832.png" style="width:150px;" alt="">
 
                     <h1 class="display-3 text-center">
                         TIO TAXI
                     </h1>
-
                 </div>
             </div>
-            
-<!-- 
+        </div>
+
+        <!-- 
 	    <nav>
                 <ul class=u_list_box>
                     <li class=list_item><a href="">Tu taxi en vivo</a></li>
@@ -46,56 +58,42 @@
                 </ul>
 	    </nav>
 -->
-<!-- Diseño de la barra de navegación-->
+        <!-- diseño barra de navegacion-->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <img class="img-fluid" style="width: 50px;" src="./imagenes/worldwide-location.png">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.html">¿Donde Está? </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./ubicar.html">¿Donde Estuvo?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">¿Quienes Somos?</a>
-          </li>
-        
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link text-dark fs-5 " href="./index.html">Localizar</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link text-dark fs-5 " href="./ubicar.html">¿Donde Estuvo?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark fs-5 " href="#">Quienes Somos</a>
+            </li>
         </ul>
-      </div>
-    </div>
-  </nav>
 
 
 
+    </header>
 
-
-
-
-        </header>
-
-        <main>
-            <div id="map"> </div>
-            <table id="tabla">
-                <tr>
-                    <td>LATITUD</td>
-                    <td>LONGITUD</td>
-                    <td>TIEMPO</td>
-                </tr>
-                <tr onload="readFile()">
-                    <td id="output1"></td>
-                    <td id="output2"></td>
-                    <td id="output3"></td>
-                </tr>
-            </table>
-	    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	    <script src="/estatico/jscode.js"></script>
-        </main>
-    </body>
+    <main>
+        <div id="map"> </div>
+        <table id="tabla">
+            <tr>
+                <td>LATITUD</td>
+                <td>LONGITUD</td>
+                <td>TIEMPO</td>
+            </tr>
+            <tr onload="readFile()">
+                <td id="output1"></td>
+                <td id="output2"></td>
+                <td id="output3"></td>
+            </tr>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="/estatico/jscode.js"></script>
+    </main>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
 
 </html>
