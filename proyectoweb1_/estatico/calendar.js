@@ -47,6 +47,11 @@ function obtenerdatos(){
 		alert("Ups! la fecha/hora inicial debe ocurrir antes que la final")
 	}
 
+	// 3. ¿la fecha/hora inicial y final son realmente menores a las del momento en 
+	//    el que se realiza la consulta.
+
+	// 4. ¿la fecha/hora consultada realmente está en la base de datos?
+
 
 //	return [fecha1,hora1,fecha2,hora2]
 
