@@ -35,7 +35,7 @@
     }
 </style>
 
-<body>
+<body class="body">
     <!-- Diseño encabezado logo y titulo-->
     <header class="container-fluid">
         <!-- el container hace que encabezado cubra la extension de la pantalla-->
@@ -87,18 +87,25 @@
 
 
 
-        <table id="tabla">
-            <thead>
-                <th>LATITUD</th>
-                <th>LONGITUD</th>
-                <th>TIEMPO</th>
-            </thead>
-            <tr onload="readFile()">
-                <td id="output1"></td>
-                <td id="output2"></td>
-                <td id="output3"></td>
-            </tr>
+        <table id="tabla" class="mt-5 table table-sm fondo">
+            <div class="table-responsive">
+                <div class="table-class table-align-middle">
+                    <thead>
+                        <th>LATITUD</th>
+                        <th>LONGITUD</th>
+                        <th>TIEMPO</th>
+                    </thead>
+                    <tr onload="readFile()">
+                        <td id="output1"></td>
+                        <td id="output2"></td>
+                        <td id="output3"></td>
+                    </tr>
+                </div>
+            </div>
+
         </table>
+
+
         <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="/estatico/jscode.js"></script>
