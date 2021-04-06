@@ -6,8 +6,8 @@
     <meta name="description" content="Esta página muestra la geolocalización de tu vehículo" />
     <meta name="robots" content="index,follow" />
     <title class="container-fluid">TIO TAXIS</title>
-
-    <link rel="apple-touch-icon" sizes="57x57" href="./imagenes/apple-icon-57x57.png">
+    <!-- Esto crea el icono en el titulo-->
+    <link rel="apple-touch-icon" sizes="57x57" href="./imagenes/>
     <link rel="apple-touch-icon" sizes="60x60" href="./imagenes/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./imagenes/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="./imagenes/apple-icon-76x76.png">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon-16x16.png">
     <link rel="manifest" href="./imagenes/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./imagenes/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/./imagenes/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
 
@@ -57,7 +57,7 @@
 
 <body class="body">
     <!-- Diseño encabezado logo y titulo-->
-    <header class="container-fluid">
+    <header class="container-fluid mt-3 ">
         <!-- el container hace que encabezado cubra la extension de la pantalla-->
         <div class="row">
             <!-- crea una fila con columnas dentro-->
@@ -65,7 +65,7 @@
             <div class="col-lg-12 h-100 d-flex">
                 <!-- col-lg-12 me indica que es una columna, d-flex las vuelve flexible para que un contenido salga al lado del otro -->
                 <div class="mx-auto d-flex">
-                    <img src="./imagenes/1617579128832.png" style="width:150px;" alt="Uffs, tuvimos un problema">
+                    <img src="./imagenes/1617579128832.png" style="width:70px; height: 70px;" alt="Uffs, tuvimos un problema">
                     <h1 class="display-3 text-center">
                         TIO TAXI
                     </h1>
@@ -87,10 +87,10 @@
             <li class="nav-item">
                 <a class="nav-link text-dark fs-5 " href="./index.html">Localizar</a>
             </li>
-            <li class="nav-item"> <a class="nav-link text-dark fs-5 " href="./ubicar.html">¿Donde Estuvo?</a>
+            <li class="nav-item"> <a class="nav-link text-dark fs-5 " href="./ubicar.html">¿Donde estuvo?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark fs-5 " href="#">Quienes Somos</a>
+                <a class="nav-link text-dark fs-5 " href="#">Quienes somos</a>
             </li>
         </ul>
 
@@ -107,13 +107,13 @@
 
 
 
-        <table id="tabla" class="mt-5 table table-sm fondo">
+        <table id="tabla" class="mt-3 table table-sm fondo">
             <div class="table-responsive">
                 <div class="table-class table-align-middle">
                     <thead>
-                        <th>LATITUD</th>
-                        <th>LONGITUD</th>
-                        <th>TIEMPO</th>
+                        <th>Latitud</th>
+                        <th>Longitud</th>
+                        <th>Tiempo</th>
                     </thead>
                     <tr onload="readFile()">
                         <td id="output1"></td>
